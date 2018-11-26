@@ -102,7 +102,19 @@ class Home extends CI_Controller{
 		$data['footerJs'] = "footerJs/pEntryJs";
 		$this->load->view("include/template",$data);
 	}
-	function printTable(){
+	public function getClass(){
+		$data = $this->db->get("book_class")->result();
+		echo json_encode($data);
+	}
+
+	public function getSubject() {
+		$classID = $this->input->post('classID');
+		$data = $this->db->query("SELECT `sno`, `name` FROM `enter_stock1` WHERE `hsn_sac` = '".$classID."' GROUP BY `name`;")->result();
+		echo json_encode($data);
+	}
+
+	public function printTable() {
+
 		$w = $this->input->post("w");
 		?>
 	<div class="col-sm-10 ">

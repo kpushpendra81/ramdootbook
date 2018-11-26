@@ -125,19 +125,31 @@
 							</div>
 							
 						</div>	
-						<div class="form-group" id ="printT"><div class="form-group">
-							<div class="col-sm-10 ">
-					<script>
-						$("#product_quantity").keyup(function(){
-					var w = $("#product_quantity").val();
-					$.post("<?php echo site_url("home/printTable") ?>",{w : w}, function(data){
-						$("#printT").html(data);
-						});
-						});
-					</script>
-					 </div>
-					</div>
-					</div>	
+						<div class="form-group" id ="printT">
+							<div class="form-group">
+								<div class="col-sm-12 ">
+									<table class="table">
+										<thead>
+											<tr>
+												<th class="text-center">#</th>
+												<th class="text-center">Book Name</th>
+												<th class="text-center">Class Name</th>
+												<th class="text-center">Subject</th>
+												<th class="text-center">P.Rate/U</th>
+												<th class="text-center">S. Rate/U</th>
+												<th class="text-center">Old Quantity</th>
+												<th class="text-center">Pur Quantity</th>
+												<th class="text-center">CGST%</th>
+												<th class="text-center">SGST%</th>
+												<th class="text-center">Discount</th>
+												<th class="text-center">Amount</th>
+											</tr>
+										</thead>
+										<tbody id="tableBody"></tbody>
+									</table>
+								</div>
+							</div>
+						</div>	
 						<div class="form-group">
 							<div class="col-sm-5">
 								<label class="col-sm-5 control-label">
@@ -274,4 +286,62 @@
 	<!-- end: FORM WIZARD PANEL -->
 </div>				
 </form>
+
+<script>
+	$("#product_quantity").keyup(function(){
+		let productQuantity = parseInt($("#product_quantity").val())
+		if(isNaN(productQuantity)){
+			alert("Please enter number only.");
+			$("#product_quantity").val("");
+			return false;
+		}
+		$.ajax({
+			url: "<?= site_url("home/getClass"); ?>",
+			method: "POST",
+			success: function (data) {
+				console.log(data);
+				let rows = [];
+				for(let i = 1; i <= productQuantity; i ++) {
+					rows.push(generateRows(i, data));
+				}
+				$('#tableBody').html(rows.join('\n'));
+			}
+		})
+	});
+
+	$(document).on('change', '.className', function(event) {
+		$.ajax({
+			url: "<?= site_url("home/getSubject"); ?>",
+			method: "POST",
+			data: {classID: event.target.value},
+			success: function (data) {
+				let options = `<option values="">-Select subject-</option>\n` + JSON.parse(data).map(val => `<option value="${val.name}">${val.name}</option>`).join('\n');
+				let subjectID = event.target.id.split("-")[1];
+				$(`#subject-${subjectID}`).html(options);
+			}
+		})
+	})
+
+	function generateRows(counter, values) {
+		let options = `<option values="">-Select Class-</option>\n` + JSON.parse(values).map(val => `<option value="${val.id}">${val.class_name}</option>`).join('\n');
+		return `
+			<tr>
+				<td class="text-center">${counter}</td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="bookName[]" id="bookName-${counter}" /></td>
+				<td class="text-center">
+					<select class="form-control col-sm-1 className" type="text" name="className[]" id="className-${counter}">${options}</select>
+				</td>
+				<td class="text-center"><select class="form-control col-sm-1" type="text" name="subject[]" id="subject-${counter}"></select></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="p_rate_u[]" id="p_rate_u-${counter}"  style="width: 100px;"/></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="s_rate_u[]" id="s_rate_u-${counter}"  style="width: 100px;"/></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="old_quantity[]" id="old_quantity-${counter}" style="width: 70px;" /></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="pur_quantity[]" id="pur_quantity-${counter}" style="width: 70px;" /></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="cgst[]" id="cgst-${counter}" style="width: 70px;" /></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="sgst[]" id="sgst-${counter}" style="width: 70px;" /></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="discount[]" id="discount-${counter}" style="width: 70px;" /></td>
+				<td class="text-center"><input class="form-control col-sm-1" type="text" name="amount[]" id="amount-${counter}" /></td>
+			</tr>
+		`
+	}
+</script>
 			
