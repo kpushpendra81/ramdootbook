@@ -1,0 +1,12 @@
+/* ---------------------------------------------------- BUtton CSS end ----------------------------------------- */
+
+@media print
+{
+    body * { visibility: none; }
+    .non-printable { display: none; }
+    .printcontent * { visibility: visible; }
+}
+@page{
+	size:auto; margin-bottom:5mm;
+	margin-top:107px;
+}

@@ -1,0 +1,26 @@
+[24-Nov-2015 15:32:26 Asia/Calcutta] PHP Parse error:  syntax error, unexpected end of file in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/views/include/menu.php on line 106
+[24-Nov-2015 15:32:33 Asia/Calcutta] PHP Parse error:  syntax error, unexpected end of file in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/views/include/menu.php on line 106
+[24-Nov-2015 19:09:41 Asia/Calcutta] PHP Fatal error:  Call to a member function getById() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/patient.php on line 278
+[25-Nov-2015 11:26:25 Asia/Calcutta] PHP Fatal error:  Call to a member function getById() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/patient.php on line 278
+[25-Nov-2015 11:31:58 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[25-Nov-2015 11:33:08 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[25-Nov-2015 11:33:25 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[25-Nov-2015 11:34:50 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[25-Nov-2015 11:35:10 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[25-Nov-2015 11:35:50 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[25-Nov-2015 11:36:17 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[01-Dec-2015 16:47:01 Asia/Calcutta] PHP Fatal error:  Call to a member function getById() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/patient.php on line 278
+[01-Dec-2015 16:52:12 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[01-Dec-2015 16:53:00 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 62
+[01-Dec-2015 17:10:37 Asia/Calcutta] PHP Fatal error:  Call to a member function getById() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/patient.php on line 278
+[03-Dec-2015 14:03:37 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 148
+[03-Dec-2015 14:03:52 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 148
+[03-Dec-2015 14:04:47 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 148
+[03-Dec-2015 14:05:24 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 148
+[03-Dec-2015 14:14:23 Asia/Calcutta] PHP Fatal error:  Call to a member function insert() on a non-object in /home/gfincuct/public_html/painclinicgroup.in/painAdmin/application/controllers/procedure.php on line 148
+[13-Apr-2017 12:09:05 Etc/GMT] PHP Parse error:  syntax error, unexpected '<' in /home/gfincuct/public_html/zapAdmin/application/views/invoice/purInvoice.php on line 205
+[13-Apr-2017 12:15:17 Etc/GMT] PHP Parse error:  syntax error, unexpected ';' in /home/gfincuct/public_html/zapAdmin/application/views/invoice/purInvoice.php on line 259
+[24-Apr-2017 20:55:50 Etc/GMT] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/gfincuct/public_html/zapAdmin/application/controllers/dayBook.php on line 88
+[25-Apr-2017 07:30:09 Etc/GMT] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/gfincuct/public_html/zapAdmin/application/controllers/product.php on line 54
+[25-Apr-2017 07:57:47 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/gfincuct/public_html/zapAdmin/application/views/invoice/saleInvoice.php on line 165
+[25-Apr-2017 12:23:40 Etc/GMT] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/gfincuct/public_html/zapAdmin/application/views/invoice/texinvoice.php on line 212
